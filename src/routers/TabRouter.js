@@ -75,9 +75,14 @@ export default (
               routeName,
             };
           }
+          let accessibilityLabel;
+          if(routeConfigs[routeName].screen.navigationOptions) {
+            accessibilityLabel = routeConfigs[routeName].screen.navigationOptions.accessibilityLabel
+          }
           return {
             key: routeName,
             routeName,
+            accessibilityLabel,
           };
         });
         state = {
