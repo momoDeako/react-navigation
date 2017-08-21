@@ -73,6 +73,7 @@ export default (
               ...tabRouter.getStateForAction(childAction),
               key: routeName,
               routeName,
+              accessibilityLabel,
             };
           }
           let accessibilityLabel;
